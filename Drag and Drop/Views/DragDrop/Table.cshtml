@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Table";
+}
+<head>
+    <style>
+        #div1 {
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td id="drag1" src="~/favicon.ico"  draggable="true" ondragstart="drag(event)">Pankaj</td>
+            <td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td id="drag2" src="~/favicon.ico"  draggable="true" ondragstart="drag(event)">Pradip</td>
+            <td id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td id="drag3" src="~/favicon.ico"  draggable="true" ondragstart="drag(event)" width="336" height="69">kamal</td>
+            <td id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Shivam</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </tbody>
+</table>
+

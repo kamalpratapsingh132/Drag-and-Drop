@@ -1,0 +1,29 @@
+﻿@model Drag_and_Drop.Models.Add_Pateint
+@{
+    ViewData["Title"] = "Create_Patient";
+}
+<script src="~/js/Doctor_Staff.js"></script>
+<div class="modal-body">
+    <form>
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" id="Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" id="Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" id="Name" class="form-control" />
+        </div>
+
+    </form>
+    <script src="~/js/Doctor_Staff.js"></script>
+    <div>
+        <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+    </div>
+    @*<button type="button" class="btn btn-primary" id="btnAdd" onclick="Add()">Add</button>*@
+
+
+</div>

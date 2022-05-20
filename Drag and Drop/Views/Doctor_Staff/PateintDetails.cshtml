@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Drag_and_Drop.Models.Add_Pateint>
+
+@*<style>
+        #div1 {
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>*@
+
+<div class="box ">
+    <h1>Employee Data list </h1>
+    <table class="table table-bordered">
+        <tr>
+            <td>Lead</td>
+            <td>Active</td>
+            <td>Pending</td>
+            <td>Storage</td>
+        </tr>
+        @foreach (var emps in Model)
+        {
+            <tr>
+                <td id="drag1" draggable="true" ondragstart="drag(event)"><a href="#">@emps.Name</a></td>
+                <td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                <td></td>
+                <td></td>
+            </tr>
+        }
+    </table>
+</div>

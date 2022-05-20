@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    @*<button type="button" class="btn btn-primary mt-1"  onclick="return Add();">Add New User</button>*@
+    <a asp-action="Create_Patient" asp-controller="Doctor_Staff" class="btn btn-outline-info">Add New Pateint</a>
+</div>
+
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="~/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+    <link href="~/datatables/css/jquery.dataTables.css" rel="stylesheet" />*@
+@*<style>
+        #div1 {
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>*@
+<style>
+    .connectedSortable {
+        border: 1px solid #eee;
+        width: 142px;
+        min-height: 20px;
+        list-style-type: none;
+        margin: 0;
+        padding: 5px 0 0 0;
+        float: left;
+        margin-right: 10px;
+    }
+
+        .connectedSortable li {
+            margin: 0 5px 5px 5px;
+            padding: 5px;
+            font-size: 1.2em;
+            width: 120px;
+        }
+</style>
+
+@*<div class="container">*@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>LEAD</th>
+            <th>ACTIVE</th>
+            <th>PENDING</th>
+            <th>STORAGE</th>
+
+        </tr>
+    </thead>
+    <tr>
+        <td>
+            <ul id="sortable1" class=" tbody text-center connectedSortable ">
+            </ul>
+            </td>
+        <td>
+            <ul class=" connectedSortable ">
+            </ul>
+            </td>
+        <td>
+
+            <ul class=" connectedSortable ">
+            </ul>
+            </td>
+        <td>
+
+            <ul class=" connectedSortable ">
+            </ul>
+        </td>
+    </tr>
+</table>
+<div>
+
+    
+   
+
+    </div>
+
+
+    @*<table class="table table-bordered table-hover table table-bordered" id="PateintTable">
+            <thead>
+                <tr class="text-center text-info">
+
+                    <th  >
+                        NEW PATIENT
+                    </th>
+                    <th >
+                        ACTIVE
+                    </th>
+                    <th>
+                        PENDING
+                    </th>
+                    <th>
+                        STORING
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody class="tbody text-center">
+            </tbody>
+
+        </table>*@
+    @*@section Scripts
+            {
+            <script src="~/js/Doctor_Staff.js"></script>
+            <script src="~/datatables/js/jquery.dataTables.min.js"></script>
+            <script src="~/datatables/js/dataTables.bootstrap4.js"></script>
+
+        }
+        <script>
+            $(document).ready(function () {
+                $('#PateintTable').dataTable({
+                });
+            });
+        </script>*@
+
+@*</div>*@
